@@ -35,15 +35,15 @@ void free_keyboard_options(KeyboardOptions* keyboard_options)
 	{
 		if (keyboard_options->color_left)
 		{
-			free(keyboard_options->color_left);
+			gdk_rgba_free(keyboard_options->color_left);
 		}
 		if (keyboard_options->color_center)
 		{
-			free(keyboard_options->color_center);
+			gdk_rgba_free(keyboard_options->color_center);
 		}
 		if (keyboard_options->color_right)
 		{
-			free(keyboard_options->color_right);
+			gdk_rgba_free(keyboard_options->color_right);
 		}
 		free(keyboard_options);
 	}
